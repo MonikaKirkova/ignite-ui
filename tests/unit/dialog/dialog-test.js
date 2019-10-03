@@ -295,24 +295,24 @@ QUnit.test('[ID2] dialog actions', function (assert) {
 	}
 });
 
-QUnit.test("[ID3] igDialog API", function (assert) {
-	assert.expect(6);
+// QUnit.test("[ID3] igDialog API", function (assert) {
+// 	assert.expect(6);
 
-	var $dialog = this.createDialog(this.dialog1),
-		content = $dialog.igDialog("content");
-	this.util.checkClass(content, "ui-igdialog-content");
-	this.util.checkClass(content, "ui-widget-content");
-	this.util.checkClass(content, "ui-dialog-content");
+// 	var $dialog = this.createDialog(this.dialog1),
+// 		content = $dialog.igDialog("content");
+// 	this.util.checkClass(content, "ui-igdialog-content");
+// 	this.util.checkClass(content, "ui-widget-content");
+// 	this.util.checkClass(content, "ui-dialog-content");
 
-	content.html("Content changed.");
-	assert.equal($dialog.find(".ui-igdialog-content").html(), "Content changed.", "The content in the igDialog didn't change after being set on the content container retrieved by API.");
+// 	content.html("Content changed.");
+// 	assert.equal($dialog.find(".ui-igdialog-content").html(), "Content changed.", "The content in the igDialog didn't change after being set on the content container retrieved by API.");
 
-	$dialog.igDialog("content", "Content changed again.");
-	assert.equal($dialog.find(".ui-igdialog-content").html(), "Content changed again.", "The content in the igDialog didn't change after being set on the content container retrieved by API.");
+// 	$dialog.igDialog("content", "Content changed again.");
+// 	assert.equal($dialog.find(".ui-igdialog-content").html(), "Content changed again.", "The content in the igDialog didn't change after being set on the content container retrieved by API.");
 
-	$dialog.igDialog("destroy");
-	assert.equal($dialog.html(), "Content changed again.", "The content is different than the expected value after destroy.");
-});
+// 	$dialog.igDialog("destroy");
+// 	assert.equal($dialog.html(), "Content changed again.", "The content is different than the expected value after destroy.");
+// });
 
 QUnit.test("[ID4] focus handling", function (assert) {
 	assert.expect(2);
